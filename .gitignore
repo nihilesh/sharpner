@@ -1,0 +1,14 @@
+.DS_Store
+.classpath
+.project
+.settings/
+.metadata/
+RemoteSystemsTempFiles/
+C++/.cproject
+C++/.project
+.vagrant
+*~
+.git
+*.[oa]
+
+

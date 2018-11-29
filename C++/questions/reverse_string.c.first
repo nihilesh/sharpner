@@ -1,0 +1,40 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+/*
+Reverse string - 
+      Given string say 'Atul Patil' reverse it.
+         i.e. return 'litaP lutA'
+*/
+
+char *
+reverse_string(const char *str) {
+	if (! str) {
+		return NULL;
+	}
+	int len = strlen(str);
+    char *rev = (char *) malloc(len+1);
+    memcpy(rev, str, len);
+    rev[len] = '\0';
+    
+    char *start = rev;
+	char *end = rev+len-1;
+	while (start < end) {	
+		char tmp = *start;
+		*start = *end;
+		*end = tmp;
+		start++;
+		end --;
+	}
+	return rev;
+}
+
+int main(){
+	const char *str = "Atul Patil";
+    char *rev = reverse_string(str);
+	printf( "%s ==> %s\n", str, rev);
+    free(rev);
+	return 0;
+}
+
+	
