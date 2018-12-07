@@ -10,5 +10,7 @@ C++/.project
 *~
 .git
 *.[oa]
+*.dSYM/
+.vscode/
 
 
