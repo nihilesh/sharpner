@@ -10,5 +10,6 @@ C++/.project
 *~
 .git
 *.[oa]
+*.dSYM/
 
 
