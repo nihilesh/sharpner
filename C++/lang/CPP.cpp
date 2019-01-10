@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <cmath>
 
 using namespace std;
 
@@ -52,5 +53,16 @@ int main() {
 	}
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
 	practice_vector();
+	signed int y = -1;
+	unsigned int z = y;
+	signed int i = z;
+	unsigned int j = i;
+	cout << "j = " << j << endl;
+        double d = 1.12345678;
+	uint64_t ui = 10000;
+	int64_t  vv = ui/d;
+	cout << "vv = " << vv << endl;
+        cout << "ceil 5/1.11..15times = " << std::ceil(5/1.111111111111111) << endl; 
+        cout << "ceil 5/1.11..15times2 = " << std::ceil(5/1.1111111111112) << endl; 
 	return 0;
 }
