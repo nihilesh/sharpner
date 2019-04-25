@@ -10,11 +10,10 @@ using namespace std;
 
 void print_array(const int* arr, int len) {
     cout << "array: ";
-    for( auto i: vector<int>(len)){
-        cout << *arr++ << ", ";
+    for( int i=0; i < len; i++){
+        cout << arr[i] << ", ";
     }
     cout << endl;
-    
 }
 
 class Solution{
@@ -82,6 +81,21 @@ class Solution2{
     }
 };
 
+class Solution3{
+    public:
+        int max_subsequence(vector<int> nums) {
+            int max_sum = nums.front();
+            int tmp_sum = max_sum;
+            for (size_t i = 0; i < nums.size(); i++) {
+                int num = nums[i];
+                tmp_sum += num;
+                tmp_sum = max(tmp_sum, num);
+                max_sum = max(tmp_sum, max_sum); 
+            }
+            return max_sum;
+        }
+};
+
 int main(){
     Solution s;
     int arr[]{2, 3, -4, -1, 3, 3, -5, 10, 1};
@@ -95,6 +109,17 @@ int main(){
     Solution2 s2;
     start = std::chrono::high_resolution_clock::now();
     cout << "max sum: " << s2.find_max_subsequence(arr, sizeof(arr)/sizeof(int)) << endl;
+    end = std::chrono::high_resolution_clock::now();
+    timeTakenInSeconds = (end - start).count() * ((double) chrono::high_resolution_clock::period::num / chrono::high_resolution_clock::period::den);
+    cout << "Time taken: " << timeTakenInSeconds << endl;
+
+    Solution3 s3;
+    start = std::chrono::high_resolution_clock::now();
+    vector<int> v;
+    for (int i =0; i < (sizeof(arr)/sizeof(int)); i++){
+        v.push_back(arr[i]);
+    }
+    cout << "max sum: " << s3.max_subsequence(v);
     end = std::chrono::high_resolution_clock::now();
     timeTakenInSeconds = (end - start).count() * ((double) chrono::high_resolution_clock::period::num / chrono::high_resolution_clock::period::den);
     cout << "Time taken: " << timeTakenInSeconds << endl;
