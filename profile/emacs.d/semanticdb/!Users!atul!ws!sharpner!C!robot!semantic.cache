@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags nil
+      :file "robot.c"
+      :pointmax 75
+      :fsize 73
+      :lastmodtime '(23465 22654 942381 601000)
+      :unmatched-syntax nil))
+  :file "!Users!atul!ws!sharpner!C!robot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
