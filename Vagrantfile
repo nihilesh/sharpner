@@ -89,5 +89,9 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y emacs
     cp -R /vagrant/emacs.d ~/.emacs.d
 
+    # Vim
+    # TODO
+    # Download .vimrc from github
+
   SHELL
 end

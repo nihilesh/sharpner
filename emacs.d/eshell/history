@@ -1,7 +1,0 @@
-pwd
-pwd
-python InterfaceStatCollectorTest.py
-docker ps
-pwd
-docker ps
-exit

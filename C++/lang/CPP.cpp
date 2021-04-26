@@ -46,11 +46,13 @@ void practice_vector(){
 
 
 int main() {
-	vector<int> v = { 1, 2, 3 };
-	for (auto i : v) {
-		cout << i << endl;
-	}
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	practice_vector();
+	// vector<int> v = { 1, 2, 3 };
+	// for (auto i : v) {
+	// 	cout << i << endl;
+	// }
+	// cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	// practice_vector();
+	unsigned int n = true;
+	cout << "n = " << n;
 	return 0;
 }
